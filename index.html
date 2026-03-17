@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Summary Cards -->
+    <div class="summary">
+      <div class="card income-card">
+        <p>Total Income</p>
+        <h2 id="total-income">$0.00</h2>
+      </div>
+      <div class="card expense-card">
+        <p>Total Expenses</p>
+        <h2 id="total-expense">$0.00</h2>
+      </div>
+      <div class="card balance-card">
+        <p>Balance</p>
+        <h2 id="balance">$0.00</h2>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Add Transaction Form -->
+    <div class="form-section">
+      <h3>Add Transaction</h3>
+      <form id="transaction-form">
+        <input type="text" id="description" placeholder="Description (e.g. Salary, Rent)" required />
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="date" id="date" required />
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+
+    <!-- Transaction List -->
+    <div class="history-section">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
