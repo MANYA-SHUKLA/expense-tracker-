@@ -1,4 +1,3 @@
-// State
 let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 let chart = null;
 
