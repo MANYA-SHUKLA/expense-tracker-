@@ -1,7 +1,5 @@
 let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 let chart = null;
-
-// DOM refs
 const form = document.getElementById('transaction-form');
 const list = document.getElementById('transaction-list');
 
