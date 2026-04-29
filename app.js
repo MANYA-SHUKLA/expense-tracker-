@@ -4,7 +4,6 @@ const form = document.getElementById('transaction-form');
 const list = document.getElementById('transaction-list');
 form.querySelector('#date').valueAsDate = new Date();
 render();
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const desc   = document.getElementById('description').value.trim();
