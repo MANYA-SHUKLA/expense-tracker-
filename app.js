@@ -10,7 +10,6 @@ form.addEventListener('submit', (e) => {
   const amount = parseFloat(document.getElementById('amount').value);
   const type   = document.getElementById('type').value;
   const date   = document.getElementById('date').value;
-
   if (!desc || isNaN(amount) || amount <= 0) return;
 
   transactions.unshift({ id: Date.now(), desc, amount, type, date });
