@@ -18,7 +18,6 @@ form.addEventListener('submit', (e) => {
   form.reset();
   form.querySelector('#date').valueAsDate = new Date();
 });
-
 function save() {
   localStorage.setItem('transactions', JSON.stringify(transactions));
 }
