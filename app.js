@@ -21,7 +21,6 @@ form.addEventListener('submit', (e) => {
 function save() {
   localStorage.setItem('transactions', JSON.stringify(transactions));
 }
-
 function deleteTransaction(id) {
   transactions = transactions.filter(t => t.id !== id);
   save();
