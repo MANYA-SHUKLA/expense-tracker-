@@ -11,7 +11,6 @@ form.addEventListener('submit', (e) => {
   const type   = document.getElementById('type').value;
   const date   = document.getElementById('date').value;
   if (!desc || isNaN(amount) || amount <= 0) return;
-
   transactions.unshift({ id: Date.now(), desc, amount, type, date });
   save();
   render();
