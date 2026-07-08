@@ -31,7 +31,6 @@ function render() {
   renderList();
   renderChart();
 }
-
 function renderSummary() {
   const income  = transactions.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0);
   const expense = transactions.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0);
